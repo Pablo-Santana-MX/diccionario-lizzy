@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Progreso del Diccionario 🌸</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f6;
+      text-align: center;
+      padding: 40px;
+    }
+    #barra {
+      width: 80%;
+      height: 30px;
+      background: #ffe6f0;
+      border-radius: 20px;
+      box-shadow: inset 4px 4px 8px #d9b6c4, inset -4px -4px 8px #ffffff;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+    #progreso {
+      height: 100%;
+      background: #ff69b4;
+      width: 0%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+    }
+    #texto {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #c71585;
+    }
+  </style>
+</head>
+<body>
+  <h1>Progreso del Diccionario 🌸</h1>
+  <div id="barra"><div id="progreso"></div></div>
+  <div id="texto">Cargando...</div>
+
+  <script>
+    const TOTAL = 930000; // total de líneas aprox del Kaikki
+    async function actualizar() {
+      try {
+        const resp = await fetch("../data/checkpoint.txt");
+        const texto = await resp.text();
+        const linea = parseInt(texto.trim());
+        const porcentaje = Math.min(100, (linea / TOTAL) * 100);
+        document.getElementById("progreso").style.width = porcentaje + "%";
+        document.getElementById("texto").innerText =
+          `Línea ${linea} de ${TOTAL} (${porcentaje.toFixed(2)}% completado)`;
+      } catch (e) {
+        document.getElementById("texto").innerText = "No se encontró checkpoint.txt";
+      }
+    }
+    setInterval(actualizar, 5000); // refrescar cada 5 segundos
+    actualizar();
+  </script>
+</body>
+</html>

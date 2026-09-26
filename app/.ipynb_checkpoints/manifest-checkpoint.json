@@ -1,0 +1,15 @@
+{
+  "name": "Diccionario Comparador Futurista",
+  "short_name": "Diccionario 🌸",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f8e9f4",
+  "theme_color": "#f8e9f4",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

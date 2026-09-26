@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard de Progreso 📊</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+    h1 { color: #333; }
+    canvas { margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>📊 Progreso del Scraping</h1>
+  <p>Visualización de cuántas palabras se han procesado en cada fuente y su evolución en el tiempo.</p>
+
+  <canvas id="progressChart" width="400" height="200"></canvas>
+  <canvas id="timelineChart" width="400" height="200"></canvas>
+
+  <script>
+    async function loadData() {
+      // --- Gráfico de barras (conteo actual) ---
+      const sources = ["wiktionary", "rae", "wordnet"];
+      const counts = [];
+
+      for (let src of sources) {
+        try {
+          const response = await fetch(`../data/${src}.csv`);
+          const text = await response.text();
+          const lines = text.trim().split("\n");
+          counts.push(lines.length - 1); // restar encabezado
+        } catch (err) {
+          counts.push(0);
+        }
+      }
+
+      const ctx1 = document.getElementById("progressChart").getContext("2d");
+      new Chart(ctx1, {
+        type: "bar",
+        data: {
+          labels: ["Wiktionary", "RAE", "Wordnet"],
+          datasets: [{
+            label: "Palabras procesadas",
+            data: counts,
+            backgroundColor: ["#4caf50", "#2196f3", "#ff9800"]
+          }]
+        },
+        options: { responsive: true, scales: { y: { beginAtZero: true } } }
+      });
+
+      // --- Gráfico de línea (timeline desde scraper.log) ---
+      try {
+        const logResponse = await fetch("../data/scraper.log");
+        const logText = await logResponse.text();
+        const lines = logText.split("\n");
+
+        const timestamps = [];
+        const wik = [], rae = [], wn = [];
+
+        let wCount = 0, rCount = 0, wnCount = 0;
+
+        for (let line of lines) {
+          if (line.includes("Scraping")) {
+            const now = new Date();
+            timestamps.push(now.toLocaleTimeString());
+
+            if (line.toLowerCase().includes("wiktionary")) wCount++;
+            if (line.toLowerCase().includes("rae")) rCount++;
+            if (line.toLowerCase().includes("wordnet")) wnCount++;
+
+            wik.push(wCount);
+            rae.push(rCount);
+            wn.push(wnCount);
+          }
+        }
+
+        const ctx2 = document.getElementById("timelineChart").getContext("2d");
+        new Chart(ctx2, {
+          type: "line",
+          data: {
+            labels: timestamps,
+            datasets: [
+              { label: "Wiktionary", data: wik, borderColor: "#4caf50", fill: false },
+              { label: "RAE", data: rae, borderColor: "#2196f3", fill: false },
+              { label: "Wordnet", data: wn, borderColor: "#ff9800", fill: false }
+            ]
+          },
+          options: { responsive: true, scales: { y: { beginAtZero: true } } }
+        });
+      } catch (err) {
+        console.error("No se pudo cargar scraper.log", err);
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+  background-color: #f8e9f4;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.neumorphic-box {
+  background: #f8e9f4;
+  border-radius: 20px;
+  box-shadow: 9px 9px 16px #d1c1cc,
+              -9px -9px 16px #ffffff;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #5a3e57;
+}
+
+input, button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  background: #f8e9f4;
+  box-shadow: inset 5px 5px 10px #d1c1cc,
+              inset -5px -5px 10px #ffffff;
+}
+
+.resultado-box {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.definicion {
+  background: #f8e9f4;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: inset 5px 5px 10px #d1c1cc,
+              inset -5px -5px 10px #ffffff;
+}
+.titulo {
+  font-size: 2.5em;
+  margin: 0;
+  text-align: center;
+  color: #5a3e57;
+  line-height: 1.1; /* más compacto */
+}
+
+.subtitulo {
+  font-size: 1.1em;
+  margin: 2px 0 15px 0; /* casi pegado al título */
+  text-align: center;
+  color: #a86fa3;
+  display: inline-block;
+  border-bottom: 2px solid #a86fa3; /* línea decorativa rosa */
+  padding-bottom: 3px; /* espacio mínimo entre texto y línea */
+}
+

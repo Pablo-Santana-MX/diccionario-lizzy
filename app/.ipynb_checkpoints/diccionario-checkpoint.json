@@ -1,0 +1,102 @@
+{
+  "hola": {
+    "definiciones": {
+      "RAE": "Interjección usada como saludo.",
+      "Wiktionary": "Expresión de saludo en español.",
+      "Wordnet": "Expresión para llamar la atención."
+    },
+    "sinonimos": ["buenas", "qué tal"],
+    "antonimos": [],
+    "ejemplo": "Hola, ¿cómo estás?"
+  },
+  "perro": {
+    "definiciones": {
+      "RAE": "Mamífero doméstico de la familia de los cánidos.",
+      "Wiktionary": "Animal doméstico, fiel compañero del hombre.",
+      "Wordnet": "Canino domesticado."
+    },
+    "sinonimos": ["can", "chucho"],
+    "antonimos": [],
+    "ejemplo": "El perro ladra en el patio."
+  },
+  "mar": {
+    "definiciones": {
+      "RAE": "Gran masa de agua salada que cubre la mayor parte de la superficie terrestre.",
+      "Wiktionary": "Extensión de agua salada.",
+      "Wordnet": "Océano o mar."
+    },
+    "sinonimos": ["océano"],
+    "antonimos": ["tierra"],
+    "ejemplo": "El mar estaba tranquilo."
+  },
+  "química": {
+    "definiciones": {
+      "RAE": "Ciencia que estudia la composición y propiedades de la materia.",
+      "Wiktionary": "Disciplina científica sobre la materia.",
+      "Wordnet": "La ciencia de las sustancias."
+    },
+    "sinonimos": ["ciencia química"],
+    "antonimos": [],
+    "ejemplo": "La química explica las reacciones."
+  },
+  "casa": {
+    "definiciones": {
+      "RAE": "Edificio para habitar.",
+      "Wiktionary": "Lugar donde vive una persona.",
+      "Wordnet": "Construcción destinada a vivienda."
+    },
+    "sinonimos": ["hogar", "vivienda"],
+    "antonimos": [],
+    "ejemplo": "La casa tiene jardín."
+  },
+  "amor": {
+    "definiciones": {
+      "RAE": "Sentimiento intenso del ser humano que, partiendo de su propia insuficiencia, necesita y busca el encuentro y unión con otro ser.",
+      "Wiktionary": "Afecto profundo hacia alguien.",
+      "Wordnet": "Sentimiento de afecto intenso."
+    },
+    "sinonimos": ["cariño", "afecto"],
+    "antonimos": ["odio"],
+    "ejemplo": "El amor mueve al mundo."
+  },
+  "sol": {
+    "definiciones": {
+      "RAE": "Estrella luminosa alrededor de la cual gira la Tierra.",
+      "Wiktionary": "Astro que ilumina la Tierra.",
+      "Wordnet": "La estrella central de nuestro sistema."
+    },
+    "sinonimos": ["astro"],
+    "antonimos": [],
+    "ejemplo": "El sol brilla en el cielo."
+  },
+  "libro": {
+    "definiciones": {
+      "RAE": "Conjunto de hojas impresas que se encuadernan.",
+      "Wiktionary": "Objeto que contiene texto.",
+      "Wordnet": "Publicación escrita."
+    },
+    "sinonimos": ["texto", "obra"],
+    "antonimos": [],
+    "ejemplo": "Estoy leyendo un libro."
+  },
+  "computadora": {
+    "definiciones": {
+      "RAE": "Máquina electrónica que recibe y procesa datos.",
+      "Wiktionary": "Dispositivo para procesar información.",
+      "Wordnet": "Máquina de cálculo electrónico."
+    },
+    "sinonimos": ["ordenador", "PC"],
+    "antonimos": [],
+    "ejemplo": "La computadora está encendida."
+  },
+  "flor": {
+    "definiciones": {
+      "RAE": "Parte de las plantas que contiene los órganos reproductores.",
+      "Wiktionary": "Estructura de las plantas con pétalos.",
+      "Wordnet": "Órgano reproductor de las plantas."
+    },
+    "sinonimos": ["rosa", "clavel"],
+    "antonimos": [],
+    "ejemplo": "La flor es roja."
+  }
+}

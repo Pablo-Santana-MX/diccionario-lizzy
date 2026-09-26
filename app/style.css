@@ -1,0 +1,207 @@
+/* Usamos una tipografía más redondita y amigable */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+body {
+  font-family: 'Quicksand', Arial, sans-serif;
+  background: #ffe4e8; /* Fondo rosa pastel */
+  margin: 0;
+  padding: 0;
+  color: #555;
+}
+
+.contenedor-principal {
+  background: #ffffff;
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto 20px auto;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.15); /* Sombra rosada */
+  position: relative;
+}
+
+.titulo {
+  text-align: center;
+  color: #ff1493; /* Rosa fuerte (Deep Pink) */
+  margin: 0 0 5px 0;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #ff69b4; /* Rosa medio (Hot Pink) */
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.caja-busqueda {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  border: 2px solid #ffb6c1; /* Borde rosita */
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #ff1493;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  background: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#sugerencias-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  right: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.15);
+  z-index: 100;
+  margin-top: -10px;
+  overflow: hidden;
+  border: 2px solid #fff0f5;
+}
+
+.sugerencia {
+  padding: 12px 15px;
+  border-bottom: 1px solid #fff0f5;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sugerencia:hover {
+  background: #fff0f5; 
+}
+
+.preview {
+  color: #888;
+  font-size: 0.85em;
+  display: block;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.categoria-badge {
+  font-size: 0.7em;
+  background: #ffe4e8;
+  color: #ff1493;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+#resultado {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.15);
+}
+
+#resultado.oculto {
+  display: none;
+}
+
+#resultado h2 {
+  color: #ff1493;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+
+.categoria-tag {
+  font-size: 0.9rem;
+  background: #ff69b4;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  margin-left: 15px;
+}
+
+#resultado h3 {
+  margin-top: 25px;
+  color: #ff69b4;
+  font-size: 1.1rem;
+}
+
+.lista-definiciones {
+  margin-left: 20px;
+  padding-left: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.detalles-ejemplos {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff0f5;
+  border-left: 4px solid #ff1493;
+  border-radius: 8px;
+}
+
+.detalles-ejemplos summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #ff1493;
+  outline: none;
+}
+
+.lista-ejemplos {
+  margin-top: 15px;
+  color: #666;
+}
+
+.info-extra {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ffe4e8;
+  color: #666;
+}
+
+.error-box {
+  background: #fff0f5 !important;
+  border: 2px solid #ffb6c1;
+  color: #ff1493;
+  text-align: center;
+}
+
+.error-box h3 {
+  color: #ff1493 !important;
+  margin: 0 0 10px 0 !important;
+}

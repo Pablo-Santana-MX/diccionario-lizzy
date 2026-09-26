@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Diccionario Futurista 🌸</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f6;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    input {
+      padding: 10px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: inset 4px 4px 8px #d9b6c4, inset -4px -4px 8px #ffffff;
+      width: 60%;
+      font-size: 1.2em;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: none;
+      background: #ffb6c1;
+      box-shadow: 4px 4px 8px #d9b6c4, -4px -4px 8px #ffffff;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    #resultado {
+      background: #ffe6f0;
+      border-radius: 20px;
+      box-shadow: 8px 8px 16px #d9b6c4, -8px -8px 16px #ffffff;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #palabra {
+      font-size: 1.6em;
+      color: #c71585;
+      margin-bottom: 10px;
+    }
+    #definicion {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    #ejemplo {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Diccionario Futurista 🌸</h1>
+  <input id="entrada" type="text" placeholder="Escribe una palabra...">
+  <button onclick="buscar()">Buscar</button>
+
+  <div id="resultado">
+    <h2 id="palabra"></h2>
+    <p id="definicion"></p>
+    <p id="ejemplo"></p>
+  </div>
+
+  <script>
+    function buscar() {
+      const palabra = document.getElementById("entrada").value.toLowerCase();
+      fetch("data/diccionario_limpio.json")
+        .then(res => res.json())
+        .then(diccionario => {
+          if (diccionario[palabra]) {
+            document.getElementById("palabra").innerText = palabra;
+            document.getElementById("definicion").innerText = diccionario[palabra].definicion;
+            document.getElementById("ejemplo").innerText = diccionario[palabra].ejemplo || "";
+          } else {
+            document.getElementById("palabra").innerText = palabra;
+            document.getElementById("definicion").innerText = "No disponible";
+            document.getElementById("ejemplo").innerText = "";
+          }
+        });
+    }
+  </script>
+</body>
+</html>
+
