@@ -1,44 +1,51 @@
 # 🌸 Diccionario Lizzy (PWA)
 
-![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-pink)
-![PWA Ready](https://img.shields.io/badge/PWA-Ready-rose)
-![License](https://img.shields.io/badge/License-MIT-green)
+![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-pink?style=for-the-badge)
+![PWA Ready](https://img.shields.io/badge/PWA-Ready-rose?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## 📌 Descripción (Español)
-Este proyecto implementa un diccionario digital con estética neumórfica rosa futurista, basado en el corpus de la RAE en formato JSON.  
-Funciona como Progressive Web App (PWA), lo que permite instalarlo en dispositivos móviles y usarlo incluso sin conexión.
+> Un diccionario digital progresivo (PWA) impulsado por el corpus de la RAE con una estética neumórfica rosa futurista. / A progressive digital dictionary (PWA) powered by the RAE corpus with a futuristic pink neumorphic aesthetic.
 
-Características:
-- Definiciones tomadas del corpus RAE  
-- Búsqueda rápida con sugerencias en tiempo real  
-- Interfaz ligera y optimizada para móvil  
-- Instalación como aplicación gracias a manifest.json y service-worker.js  
+🔗 **[Ver Demo en línea / Live Demo](https://TU_USUARIO.github.io/diccionario-lizzy/)**
 
-## 📌 Description (English)
-This project implements a digital dictionary with a futuristic pink neumorphic design, based on the RAE corpus in JSON format.  
-It works as a Progressive Web App (PWA), allowing installation on mobile devices and offline usage.
+---
 
-Features:
-- Definitions from RAE corpus  
-- Fast search with real-time suggestions  
-- Lightweight, mobile-optimized interface  
-- Installable as an app via manifest.json and service-worker.js  
+## 📌 Descripción / Description
 
-## 🌐 Demo en línea
-👉 https://TU_USUARIO.github.io/diccionario-lizzy/
+### 🇪🇸 Español
+Este proyecto implementa un diccionario digital basado en el corpus de la RAE en formato JSON. Al funcionar como una **Progressive Web App (PWA)**, permite su instalación nativa en dispositivos móviles y garantiza el uso sin conexión a internet.
 
-## 🗂️ Estructura del proyecto
+**Características principales:**
+* 📖 Definiciones exactas tomadas del corpus RAE.
+* ⚡ Búsqueda rápida con sugerencias en tiempo real.
+* 📱 Interfaz ligera, fluida y 100% optimizada para móviles.
+* 📥 Instalable como aplicación independiente (`manifest.json` y `service-worker.js`).
+
+### 🇬🇧 English
+This project implements a digital dictionary based on the RAE corpus in JSON format. Built as a **Progressive Web App (PWA)**, it allows native installation on mobile devices and ensures full offline functionality.
+
+**Key features:**
+* 📖 Accurate definitions sourced from the RAE corpus.
+* ⚡ Fast search functionality with real-time suggestions.
+* 📱 Lightweight, smooth, and 100% mobile-optimized interface.
+* 📥 Installable as a standalone app via `manifest.json` and `service-worker.js`.
+
+---
+
+## 🗂️ Estructura del Proyecto / Project Structure
+
+```text
 diccionario-lizzy/
 ├── app/
-│   ├── index.html          # Interfaz principal
-│   ├── style.css           # Estilos neumórficos rosa
-│   ├── manifest.json       # Configuración PWA
-│   ├── service-worker.js   # Cache y soporte offline
-│   └── /icons              # Íconos de la app
+│   ├── index.html           # Interfaz principal / Main UI
+│   ├── style.css            # Estilos neumórficos / Neumorphic styles
+│   ├── manifest.json        # Configuración PWA / PWA config
+│   ├── service-worker.js    # Caché y soporte offline / Offline support
+│   └── /icons               # Íconos de la app / App icons
 ├── data/
-│   └── rae_dictionary.json # Corpus RAE en JSON
+│   └── rae_dictionary.json  # Corpus RAE en JSON / RAE JSON corpus
 └── docs/
-    └── README.md           # Documentación
+    └── README.md            # Documentación / Documentation
 
 ## ⚙️ Instalación / Installation
 Clonar repositorio:
